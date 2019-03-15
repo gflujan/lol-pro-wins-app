@@ -1,6 +1,77 @@
 .sidebar-drawer {
+  background-color: $sidebar-bg;
+  border-right: 2px solid $gold-3;
+  box-sizing: border-box;
+  color: $gold-3;
+  display: flex;
   height: 100vh;
-  outline: 1px dashed red;
   position: fixed;
-  width: 10em;
+  width: 17em;
+  z-index: 100;
+
+  .sidebar-container {
+    margin: 0 auto;
+    outline: 1px dashed red;
+    width: 100%;
+  }
+
+  .title,
+  .player-info-form,
+  .split-info-form,
+  .social {
+    margin-top: 1em;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .player-info-form,
+  .split-info-form {
+    background-color: #666;
+    border-radius: 4px;
+    color: $white;
+    padding: .4em;
+
+    select {
+      font-family: $font-stack;
+      font-size: .9em;
+      height: 2em;
+      margin-top: .5em;
+      outline: none;
+      width: 100%;
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+
+    div {
+      align-items: center;
+      display: flex;
+      height: 40px;
+      outline: 1px dashed blue;
+      text-align: center;
+      width: 40px;
+    }
+  }
+}
+
+.drawer-tab {
+  align-items: center;
+  background-color: $sidebar-bg;
+  border: 2px solid $gold-3;
+  border-left: .5px solid $sidebar-bg;
+  cursor: pointer;
+  display: flex;
+  height: 50px;
+  left: 0em;
+  padding: .3em;
+  position: relative;
+  top: 7em;
+  width: 20px;
+  z-index: 200;
 }

@@ -14,7 +14,7 @@
  */
 
 // CSS Reset
-// @import "./base/colors.scss";
+@import "./base/colors.scss";
 @import './base/fonts';
 @import './base/css-reset';
 
@@ -25,6 +25,10 @@
 
 // other styles
 @import './drawer';
+
+body {
+  font-family: $font-stack;
+}
 
 .github-ribbon {
   position: fixed;

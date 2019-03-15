@@ -3,7 +3,6 @@ import axios from 'axios';
 export const fetchPlayer = (playerName) => {
   return (axios.get(`/player/${playerName}`)
     .then((res) => {
-      console.log(res);
       return (res.data);
     })
     .catch((err) => {
@@ -39,7 +38,6 @@ export const fetchMatch = (matchId) => {
 export const fetchPlayerPositionsData = (encryptedSummonerId) => {
   return (axios.get(`/positions/${encryptedSummonerId}`)
     .then((res) => {
-      console.log(res);
       return (res.data);
     })
     .catch((err) => {

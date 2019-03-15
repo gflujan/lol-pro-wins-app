@@ -1,5 +1,12 @@
 import * as PlayerApiUtil from '../../util/player_api_util';
 
+/* ---------------------------------------------
+// SAVE THIS FOR LATER USE
+// MAKE SURE TO NEST THIS SCRIPT INTO A FUNCTION
+// ALSO MAKE SURE TO PAY ATTENTION TO MY ASYNC CALLS
+// SO THAT I CAN GRAB THE RETURNED INFORMATION PROPERLY
+--------------------------------------------- */
+
 let gameIds = [];
 matches.forEach((match) => {
   gameIds.push(match.gameId);

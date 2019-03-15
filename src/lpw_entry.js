@@ -14,9 +14,9 @@
 --------------------------------------------- */
 // Importing the main SCSS/CSS file that will then import other stylesheets
 import './stylesheets/application.scss';
-import { grabPlayerRiotInfo } from './scripts/grab_player_riot_info';
+import { grabPlayerRiotWins } from './scripts/grab_player_riot_wins';
 
 document.addEventListener('DOMContentLoaded', () => {
-  let name = 'nneurall';
-  grabPlayerRiotInfo(name);
+  // let name = 'nneurall';
+  // grabPlayerRiotWins(name);
 });
