@@ -52,4 +52,8 @@ matches.forEach((match) => {
 
 let wins = [];
 let participantId;
-gameIds.forEach();
+gameIds.forEach((gameId) => {
+  PlayerApiUtil.fetchMatch(gameId).then((game) => {
+    if (playerId === game.) {}
+  });
+});
