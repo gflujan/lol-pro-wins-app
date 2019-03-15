@@ -13,6 +13,10 @@
 // VERSION 2.0
 --------------------------------------------- */
 // Importing the main SCSS/CSS file that will then import other stylesheets
-import './stylesheets/app.scss';
+import './stylesheets/application.scss';
+import { grabPlayerRiotInfo } from './scripts/grab_player_riot_info';
 
-document.addEventListener('DOMContentLoaded', () => {});
+document.addEventListener('DOMContentLoaded', () => {
+  let name = 'nneurall';
+  grabPlayerRiotInfo(name);
+});

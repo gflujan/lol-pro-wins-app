@@ -14,15 +14,14 @@
  */
 
 // CSS Reset
-// @import "base/colors.scss";
-// @import "base/fonts.scss";
-// @import "base/reset.scss";
+// @import "./base/colors.scss";
+@import './base/fonts';
+@import './base/css-reset';
 
 // palettes
-// m
-
-// base styles
-// $font-stack: Verdana, sans-serif;
+@import './base/lol-darkTeal-palette';
+@import './base/lol-gold-palette';
+@import './base/lol-teal-palette';
 
 // other styles
-// m
+@import './drawer';
