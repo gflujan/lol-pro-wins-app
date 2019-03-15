@@ -4,7 +4,7 @@
 <head>
   <title>LoL Pro Wins</title>
   <meta charset="utf-8">
-  <script src="../src/scripts/grab_player_riot_wins"></script>
+  <script src="./scripts/d3.min.js"></script>
 </head>
 
 <body>
@@ -13,18 +13,22 @@
   </a>
   <div class="sidebar-drawer">
     <div class="sidebar-container">
-      <h1 class="title">LoL Pro Wins</h1>
-      <div class="player-info-form">
-        <h3>Player Info:</h3>
-        <select name="select-a-player" class="player-select">
-          <option value="select-a-player" disabled selected>Select a player...</option>
-        </select>
-      </div>
-      <div class="split-info-form">
-        <h2>Split Info:</h2>
-        <select name="select-a-split" class="split-select">
-          <option value="select-a-split" disabled selected>Select a split...</option>
-        </select>
+      <div>
+        <h1 class="title">LoL Pro Wins</h1>
+        <div class="player-info-form">
+          <h3>Pick a Player</h3>
+          <select name="select-a-player" class="player-select"></select>
+          <p class="player-name">Player In-Game Name</p>
+          <p class="team-name">Team Name</p>
+          <p class="ranked-wins">Ranked Wins</p>
+          <p class="team-wins">Team Wins</p>
+        </div>
+        <!-- <div class="split-info-form">
+          <h2>Pick a Split</h2>
+          Clean this up to add the Team Name before each group of players
+          <select name="select-a-split" class="split-select"></select>
+          <p class="selected-split">Selected Split</p>
+        </div> -->
       </div>
       <footer class="social">
         <div class="lnkd">lnkd</div>

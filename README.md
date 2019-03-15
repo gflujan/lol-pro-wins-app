@@ -1,80 +1,57 @@
-# LoL Pro Wins App
+# D3: Data-Driven Documents
 
-### [Live Demo!](https://lol-pro-wins.herokuapp.com/)
+<a href="https://d3js.org"><img src="https://d3js.org/logo.svg" align="left" hspace="10" vspace="6"></a>
 
-## Synopsis
-This is a data visualization project to attempt to show the correlation between a League of Legends pro player's Solo Queue win rate vs. their on-stage competitive win rate.
+**D3** (or **D3.js**) is a JavaScript library for visualizing data using web standards. D3 helps you bring data to life using SVG, Canvas and HTML. D3 combines powerful visualization and interaction techniques with a data-driven approach to DOM manipulation, giving you the full capabilities of modern browsers and the freedom to design the right visual interface for your data.
 
-## Background & Overview
-League of Legends is currently the biggest eSports game in the world. It's latest World Championships (in Dec. 2018) gathered approximately 100 million viewers (online). Which, by comparison, is on par with this year's (2019) Super Bowl (approx. 98 million viewers). Their professional players are starting to become full-fledged celebrities with endorsements, sponsorships and rising fan bases.
+## Resources
 
-My interest for this project comes from the fact that I am a huge fan of the game. Before starting AppAcademy, I played it regularly and very much enjoy their eSports scene. I have tended to prefer watching their broadcasts online instead of traditional TV or other traditional media.
+* [API Reference](https://github.com/d3/d3/blob/master/API.md)
+* [Release Notes](https://github.com/d3/d3/releases)
+* [Gallery](https://github.com/d3/d3/wiki/Gallery)
+* [Examples](https://bl.ocks.org/mbostock)
+* [Wiki](https://github.com/d3/d3/wiki)
 
-As a fan, and with my desire to become a full-time developer, I am very interested in merging these two worlds together.
+## Installing
 
-## Functionality & MVP Features
-The functionality of this project will be a data visualization to show the correlation between a pro players solo, online ranked queue win rate and their competitive, on-stage team play & win rate.
+If you use npm, `npm install d3`. Otherwise, download the [latest release](https://github.com/d3/d3/releases/latest). The released bundle supports anonymous AMD, CommonJS, and vanilla environments. You can load directly from [d3js.org](https://d3js.org), [CDNJS](https://cdnjs.com/libraries/d3), or [unpkg](https://unpkg.com/d3/). For example:
 
-My list of MVP's are:
-* Pro Player Lookup & Results
-    - The search results will be confined to North America to start
-    - User ability to enter a pro players name & search for both of their win rates
-    - The data will be shown as "online ranked wins" & "on-stage wins"
-* In-Game Minimap Heatmap [Example](https://s3-us-west-1.amazonaws.com/riot-developer-portal/docs/map1.png)
-    - This will display the locations played of all games for that user
-* D3.js visualization of wins per "Split"
-    - A "split" is a mini-season that competitive play is measured by
-    - There are 2 splits per calendar year
-    - I will include, at minimum, the last 2 years (2017-2019)
-* (Potential Bonus Feature) Comparison of two or more players, possibly a head-to-head account of results
+```html
+<script src="https://d3js.org/d3.v5.js"></script>
+```
 
-## Architecture & Technologies
-1) Architecture
-    a. RootFolder
-        i. dist/
-            1. index.html
-            2. bundle.js
-        ii. src/
-            1. lpw_entry.js
-        iii. package.json
-        iv. webpack.config.js
-2) Technologies
-    a Riot Games Developer API
-        i. I will be querying their API/database for user entered names of pro players
-        ii. I will be parsing through their data to get relevant win results
-        iii. I will then compare that data to archived on-stage competitive play wins
-        iv. This is the crux of this project. Without it, it would be a much more tedious (and manual) process to get results of a pro players online wins
-    b. D3.js
-        i. I will use this library to "prettify" my data
+For the minified version:
 
-## Data & API's
-1) Riot Games Developer API
-    a. I will need a simple backend to query the API from Riot Games
-    b. This is due to the fact that users will be able to search for any current, existing pro player and the search will need to be dynamic based on the current data provided by Riot Games
-    c. To avoid any potential legal risks or violations of Riot's TOS, I will not be storing any of this data in a database
-    d. All data will be individual requests to their API
-    e. Also, due to their enforcement of rate limits (i.e. num requests per second), I will try to enforce my own restriction of how many can be requests made, and how quickly
-    f. Possible Endpoints (all will be GET requests):
-        i. /lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId}
-        ii. /lol/champion-mastery/v4/scores/by-summoner/{encryptedSummonerId}
-        iii. /lol/league/v4/challengerleagues/by-queue/{queue}
-        iv. /lol/league/v4/positions/by-summoner/{encryptedSummonerId}
-        v. /lol/match/v4/matches/{matchId}
-        vi. /lol/match/v4/timelines/by-match/{matchId}
-        vii. /lol/summoner/v4/summoners/by-name/{summonerName}
+```html
+<script src="https://d3js.org/d3.v5.min.js"></script>
+```
 
-## Implementation Timeline
-1) Day One 
-    a. [] Implementation and build out of a basic backend to talk with Riot Games' API
-    b. [] Create the skeleton for my project
-    c. [] Create wireframes
-    d. [] Decide on a color scheme/palette and fonts to be used project wide
-2) Day Two 
-    a. [] Research D3 info and tutorials
-    b. [] Create routes and Axios calls to retrieve data from Riot Games API
-    c. [] Aggregation of historical data pertaining to pro players on-stage, competitive play win rates
-3) Day Three 
-    a. [] Build out sidebar to be used for selections entry
-    b. [] Build out data visualizations, structure for info & prettify it
-4) Day Four 
-    a. [] Build minimap heatmap
+You can also use the standalone D3 microlibraries. For example, [d3-selection](https://github.com/d3/d3-selection):
+
+```html
+<script src="https://d3js.org/d3-selection.v1.js"></script>
+```
+
+D3 is written using [ES2015 modules](http://www.2ality.com/2014/09/es6-modules-final.html). Create a [custom bundle using Rollup](https://bl.ocks.org/mbostock/bb09af4c39c79cffcde4), Webpack, or your preferred bundler. To import D3 into an ES2015 application, either import specific symbols from specific D3 modules:
+
+```js
+import {scaleLinear} from "d3-scale";
+```
+
+Or import everything into a namespace (here, `d3`):
+
+```js
+import * as d3 from "d3";
+```
+
+In Node:
+
+```js
+var d3 = require("d3");
+```
+
+You can also require individual modules and combine them into a `d3` object using [Object.assign](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign):
+
+```js
+var d3 = Object.assign({}, require("d3-format"), require("d3-geo"), require("d3-geo-projection"));
+```

@@ -10,9 +10,12 @@
   z-index: 100;
 
   .sidebar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin: 0 auto;
-    outline: 1px dashed red;
-    width: 100%;
+    margin-bottom: 1em;
+    width: 90%;
   }
 
   .title,
@@ -24,7 +27,11 @@
   }
 
   .title {
+    outline: 1px dashed red;
+    border-bottom: 1px solid $gold-3;
     font-size: 2em;
+    margin-bottom: 1em;
+    padding-bottom: .3em;
     text-align: center;
   }
 
@@ -32,8 +39,11 @@
   .split-info-form {
     background-color: #666;
     border-radius: 4px;
+    box-sizing: border-box;
     color: $white;
-    padding: .4em;
+    font-size: 1em;
+    padding: .3em;
+    width: 100%;
 
     select {
       font-family: $font-stack;
@@ -42,6 +52,13 @@
       margin-top: .5em;
       outline: none;
       width: 100%;
+    }
+
+    .player-info-form {
+      p {
+        outline: 1px dashed blue;
+        height: 20px;
+      }
     }
   }
 
@@ -68,9 +85,9 @@
   cursor: pointer;
   display: flex;
   height: 50px;
-  left: 0em;
-  padding: .3em;
-  position: relative;
+  left: 16.85em;
+  // padding: .3em;
+  position: absolute;
   top: 7em;
   width: 20px;
   z-index: 200;

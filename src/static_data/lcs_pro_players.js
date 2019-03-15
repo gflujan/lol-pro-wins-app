@@ -7,12 +7,13 @@ export const lcsTeams = {
       '2018': { spring: 12, summer: 10 },
       '2017': { spring: null, summer: null },
     },
-      top:  'Ssumday',
-       jg:  'AnDa',
-      mid:  'Huhi',
-      bot:  'Bang',
-      sup:  'Aphromoo',
-    coach:  'Pr0lly',
+    allPlayers: ['Ssumday', 'AnDa', 'Huhi', 'Bang', 'Aphromoo'],
+    top: 'Ssumday',
+    jg: 'AnDa',
+    mid: 'huhi',
+    bot: '100T Bang',
+    sup: 'aphromoo',
+    coach: 'Pr0lly',
   },
   c9: {
     // https://lol.gamepedia.com/Cloud9
@@ -22,12 +23,13 @@ export const lcsTeams = {
       '2018': { spring: 11, summer: 11 },
       '2017': { spring: 14, summer: 12 },
     },
-      top:  'Licorice',
-       jg:  'Svenskeren',
-      mid:  'Nisqy',
-      bot:  'Sneaky',
-      sup:  'Zeyzal',
-    coach:  'Reapered',
+    allPlayers: ['Licorice', 'Svenskeren', 'Nisqy', 'Sneaky', 'Zeyzal'],
+    top: 'Licorice',
+    jg: 'Svenskeren',
+    mid: 'C9 Nisqyyy',
+    bot: 'C9 Sneaky',
+    sup: 'C9 Zeyzal',
+    coach: 'Reapered',
   },
   cg: {
     // https://lol.gamepedia.com/Clutch_Gaming
@@ -37,12 +39,13 @@ export const lcsTeams = {
       '2018': { spring: 11, summer: 6 },
       '2017': { spring: null, summer: null },
     },
-      top:  'Huni',
-       jg:  'Lira',
-      mid:  'Damonte',
-      bot:  'Piglet',
-      sup:  'Vulcan',
-    coach:  'McScrag',
+    allPlayers: ['Huni', 'Lira', 'Damonte', 'Piglet', 'Vulcan'],
+    top: 'Huni',
+    jg: 'Lira',
+    mid: 'Damonte',
+    bot: 'Piglet',
+    sup: 'Vulcan',
+    coach: 'McScrag',
   },
   clg: {
     // https://lol.gamepedia.com/Counter_Logic_Gaming
@@ -52,12 +55,13 @@ export const lcsTeams = {
       '2018': { spring: 7, summer: 7 },
       '2017': { spring: 10, summer: 12 },
     },
-      top:  'Darshan',
-       jg:  'Wiggily',
-      mid:  'PowerOfEvil',
-      bot:  'Stixxay',
-      sup:  'Biofrost',
-    coach:  'Weldon',
+    allPlayers: ['Darshan', 'Wiggily', 'PowerOfEvil', 'Stixxay', 'Biofrost'],
+    top: 'Darshan',
+    jg: 'Wiggily',
+    mid: 'PowerOfEvil',
+    bot: 'Stixxay',
+    sup: 'Biofrost',
+    coach: 'Weldon',
   },
   fox: {
     // https://lol.gamepedia.com/Echo_Fox
@@ -67,12 +71,13 @@ export const lcsTeams = {
       '2018': { spring: 12, summer: 10 },
       '2017': { spring: 6, summer: 5 },
     },
-      top:  'Solo',
-       jg:  'Rush',
-      mid:  'Fenix',
-      bot:  'Apollo',
-      sup:  'Hakuho',
-    coach:  'Ssong',
+    allPlayers: ['Solo', 'Rush', 'Fenix', 'Apollo', 'Hakuho'],
+    top: 'Solo',
+    jg: 'Rush',
+    mid: 'Fenix',
+    bot: 'Apollo',
+    sup: 'Hakuho',
+    coach: 'Ssong',
   },
   fly: {
     // https://lol.gamepedia.com/FlyQuest
@@ -82,12 +87,13 @@ export const lcsTeams = {
       '2018': { spring: 6, summer: 10 },
       '2017': { spring: 9, summer: 6 },
     },
-      top:  'V1per',
-       jg:  'Santorin',
-      mid:  'Pobelter',
-      bot:  'WildTurtle',
-      sup:  'JayJ',
-    coach:  'Invert',
+    allPlayers: ['V1per', 'Santorin', 'Pobelter', 'WildTurtle', 'JayJ'],
+    top: 'V1per',
+    jg: 'Santorin',
+    mid: 'Pobelter',
+    bot: 'WildTurtle',
+    sup: 'JayJ',
+    coach: 'Invert',
   },
   ggs: {
     // https://lol.gamepedia.com/Golden_Guardians
@@ -97,12 +103,13 @@ export const lcsTeams = {
       '2018': { spring: 4, summer: 5 },
       '2017': { spring: null, summer: null },
     },
-      top:  'Hauntzer',
-       jg:  'Contractz',
-      mid:  'Froggen',
-      bot:  'Deftly',
-      sup:  'Olleh',
-    coach:  'Inero',
+    allPlayers: ['Hauntzer', 'Contractz', 'Froggen', 'Deftly', 'Olleh'],
+    top: 'Hauntzer',
+    jg: 'Contractz',
+    mid: 'Froggen',
+    bot: 'Deftly',
+    sup: 'Olleh',
+    coach: 'Inero',
   },
   opt: {
     // https://lol.gamepedia.com/OpTic_Gaming
@@ -112,12 +119,13 @@ export const lcsTeams = {
       '2018': { spring: 5, summer: 9 },
       '2017': { spring: null, summer: null },
     },
-      top:  'Dhokla',
-       jg:  'Meteos',
-      mid:  'Crown',
-      bot:  'Arrow',
-      sup:  'Big',
-    coach:  'Zaboutine',
+    allPlayers: ['Dhokla', 'Meteos', 'Crown', 'Arrow', 'Big'],
+    top: 'Dhokla',
+    jg: 'Meteos',
+    mid: 'Crown',
+    bot: 'Arrow',
+    sup: 'Big',
+    coach: 'Zaboutine',
   },
   tl: {
     // https://lol.gamepedia.com/Team_Liquid
@@ -127,12 +135,13 @@ export const lcsTeams = {
       '2018': { spring: 11, summer: 12 },
       '2017': { spring: 5, summer: 4 },
     },
-      top:  'Impact',
-       jg:  'Xmithie',
-      mid:  'Jensen',
-      bot:  'Doublelift',
-      sup:  'CoreJJ',
-    coach:  'Cain',
+    allPlayers: ['Impact', 'Xmithie', 'Jensen', 'Doublelift', 'CoreJJ'],
+    top: 'Impact',
+    jg: 'Xmithie',
+    mid: 'Jensen',
+    bot: 'Doublelift',
+    sup: 'CoreJJ',
+    coach: 'Cain',
   },
   tsm: {
     // https://lol.gamepedia.com/Team_SoloMid
@@ -142,13 +151,36 @@ export const lcsTeams = {
       '2018': { spring: 11, summer: 10 },
       '2017': { spring: 15, summer: 14 },
     },
-      top:  'Broken Blade',
-       jg:  'Akaadian',
-      mid:  'Bjergsen',
-      bot:  'Zven',
-      sup:  'Smoothie',
-    coach:  'Zikz',
+    allPlayers: ['Broken Blade', 'Akaadian', 'Bjergsen', 'Zven', 'Smoothie'],
+    top: 'Broken Blade',
+    jg: 'Akaadian',
+    mid: 'Bjergsen',
+    bot: 'Zven',
+    sup: 'Smoothie',
+    coach: 'Zikz',
   },
+};
+
+export const grabAllTeamNames = () => {
+  const teamNames = Object.keys(lcsTeams);
+  return teamNames;
+};
+
+export const grabAllPlayerNames = () => {
+  const teams = Object.values(lcsTeams);
+  let players = [];
+  let coaches = [];
+
+  teams.forEach((team) => {
+    players.push(team.top);
+    players.push(team.jg);
+    players.push(team.mid);
+    players.push(team.bot);
+    players.push(team.sup);
+    coaches.push(team.coach);
+  });
+
+  return (players);
 };
 
 /* ---------------------------------------------

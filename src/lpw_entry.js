@@ -14,9 +14,22 @@
 --------------------------------------------- */
 // Importing the main SCSS/CSS file that will then import other stylesheets
 import './stylesheets/application.scss';
-import { grabPlayerRiotWins } from './scripts/grab_player_riot_wins';
+import {
+  grabPlayerRiotWins
+} from './scripts/grab_player_riot_wins';
+import * as LcsProPlayers from './static_data/lcs_pro_players';
 
+// Find a way to insert the team names before each group of players
 document.addEventListener('DOMContentLoaded', () => {
-  // let name = 'nneurall';
-  // grabPlayerRiotWins(name);
+  const allLcsPlayers = LcsProPlayers.grabAllPlayerNames();
+  const allLcsTeams = LcsProPlayers.grabAllTeamNames();
+  d3.select('.player-select')
+    .selectAll('option')
+    .data(allLcsPlayers)
+    .enter()
+    .append('option', 'disabled')
+    .text((playerName) => {
+      return (playerName)
+    })
+    .on('change', grabPlayerRiotWins);
 });
