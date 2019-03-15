@@ -5,7 +5,8 @@ export const fetchPlayer = (playerName) => {
     .then((res) => {
       console.log(res);
       return (res.data);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log('----- YOU HAVE A FRONTEND "player" ERROR, GABE! -----');
       console.log(err);
     })
@@ -16,7 +17,8 @@ export const fetchPlayerMatchlist = (encryptedAccountId) => {
     .then((res) => {
       console.log(res);
       return (res.data);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log('----- YOU HAVE A FRONTEND "matchlist" ERROR, GABE! -----');
       console.log(err);
     })
@@ -27,7 +29,8 @@ export const fetchMatch = (matchId) => {
     .then((res) => {
       console.log(res);
       return (res.data);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log('----- YOU HAVE A FRONTEND "matches" ERROR, GABE! -----');
       console.log(err);
     })
@@ -38,7 +41,8 @@ export const fetchPlayerPositionsData = (encryptedSummonerId) => {
     .then((res) => {
       console.log(res);
       return (res.data);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log('----- YOU HAVE A FRONTEND "positions" ERROR, GABE! -----');
       console.log(err);
     })
@@ -49,7 +53,8 @@ export const fetchPlayerMasteries = (encryptedSummonerId) => {
     .then((res) => {
       console.log(res);
       return (res.data);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log('----- YOU HAVE A FRONTEND "summoner-masteries" ERROR, GABE! -----');
       console.log(err);
     })
@@ -60,7 +65,8 @@ export const fetchPlayerScores = (encryptedSummonerId) => {
     .then((res) => {
       console.log(res);
       return (res.data);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log('----- YOU HAVE A FRONTEND "scores" ERROR, GABE! -----');
       console.log(err);
     })
@@ -71,7 +77,8 @@ export const fetchAllChallengerPlayers = (queue) => {
     .then((res) => {
       console.log(res);
       return (res.data);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log('----- YOU HAVE A FRONTEND "queue-leagues" ERROR, GABE! -----');
       console.log(err);
     })
@@ -82,7 +89,8 @@ export const fetchPlayerMatchTimelines = (matchId) => {
     .then((res) => {
       console.log(res);
       return (res.data);
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log('----- YOU HAVE A FRONTEND "match-timelines" ERROR, GABE! -----');
       console.log(err);
     })

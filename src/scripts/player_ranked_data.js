@@ -4,7 +4,7 @@ import * as PlayerApiUtil from '../../player_api_util';
 
 // User selects player from dropdown,
 // this then triggers a call to Riot's API
-const playerName = '';
+const playerName = 'nneurall';
 PlayerApiUtil.fetchPlayer(playerName);
 
 // This then returns the player object
@@ -23,9 +23,14 @@ const nneurall = {
 // I then want to grab the id & accountId
 
 let player;
-PlayerApiUtil.fetchPlayer(playerName).then((fetchedPlayer) => {
-  player = fetchedPlayer;
-});
+PlayerApiUtil.fetchPlayer(playerName)
+  .then((fetchedPlayer) => {
+    player = fetchedPlayer;
+  });
+
+// I could DRY this up by finding these values & hard coding them
+// This would be fine for my initial purpose/use for the a/A project
+// But this would be a problem if Riot decided to change things
 
 const playerId = player.id;
 const playerAccountId = player.accountId;
@@ -34,12 +39,14 @@ const playerAccountId = player.accountId;
 // and then take the array that is under "matches"
 
 let matches;
-PlayerApiUtil.fetchPlayerMatchlist(playerAccountId).then((fetchedMatches) => {
-  matches = fetchedMatches.matches;
-});
+PlayerApiUtil.fetchPlayerMatchlist(playerAccountId)
+  .then((fetchedMatches) => {
+    matches = fetchedMatches.matches;
+  });
 
 // I now have an array of objects
-// At this point, I want to iterate through this array, and grab the "gameId's"
+// At this point, I want to iterate through this array,
+// and grab the "gameId's"
 // These will be stored in another array
 
 let gameIds = [];
@@ -53,7 +60,8 @@ matches.forEach((match) => {
 let wins = [];
 let participantId;
 gameIds.forEach((gameId) => {
-  PlayerApiUtil.fetchMatch(gameId).then((game) => {
-    if (playerId === game.) {}
-  });
+  PlayerApiUtil.fetchMatch(gameId)
+    .then((game) => {
+      if (playerId === game.) {}
+    });
 });

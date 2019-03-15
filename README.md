@@ -74,6 +74,7 @@ My list of MVP's are:
     b. [] Create routes and Axios calls to retrieve data from Riot Games API
     c. [] Aggregation of historical data pertaining to pro players on-stage, competitive play win rates
 3) Day Three 
-    a. [] Build out data visualizations, structure for info & prettify it
+    a. [] Build out sidebar to be used for selections entry
+    b. [] Build out data visualizations, structure for info & prettify it
 4) Day Four 
     a. [] Build minimap heatmap
