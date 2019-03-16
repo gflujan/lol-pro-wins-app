@@ -17,19 +17,31 @@ import './stylesheets/application.scss';
 import {
   grabPlayerRiotWins
 } from './scripts/grab_player_riot_wins';
-import * as LcsProPlayers from './static_data/lcs_pro_players';
+import { populatePlayerSelectElement } from './scripts/populate_player_select_element';
 
 // Find a way to insert the team names before each group of players
 document.addEventListener('DOMContentLoaded', () => {
-  const allLcsPlayers = LcsProPlayers.grabAllPlayerNames();
-  const allLcsTeams = LcsProPlayers.grabAllTeamNames();
+  populatePlayerSelectElement();
+
   d3.select('.player-select')
-    .selectAll('option')
-    .data(allLcsPlayers)
-    .enter()
-    .append('option', 'disabled')
-    .text((playerName) => {
-      return (playerName)
-    })
-    .on('change', grabPlayerRiotWins);
+    .on('change', () => {});
+
+  const addBars = () => {
+    const data = [80, 120, 60, 150, 200];
+    const barHeight = 20;
+    d3.select('.ranked-wins-svg')
+      .selectAll('rect')
+      .data(data)
+      .enter()
+      .append('rect')
+      .attr('width', 100)
+      .attr('height', barHeight - 1)
+      .attr('fill', 'white')
+      .attr('transform', (d, i) => {
+        return ('translate(0,' + i * barHeight + ')');
+      })
+  };
+
+  d3.select('.player-select')
+    .on('change', addBars)
 });

@@ -14,7 +14,7 @@
  */
 
 // CSS Reset
-@import "./base/colors.scss";
+@import "./base/colors";
 @import './base/fonts';
 @import './base/css-reset';
 
@@ -24,6 +24,7 @@
 @import './base/lol-teal-palette';
 
 // other styles
+@import './main';
 @import './drawer';
 
 body {

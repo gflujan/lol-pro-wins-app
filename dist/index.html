@@ -18,8 +18,8 @@
         <div class="player-info-form">
           <h3>Pick a Player</h3>
           <select name="select-a-player" class="player-select"></select>
-          <p class="player-name">Player In-Game Name</p>
-          <p class="team-name">Team Name</p>
+          <p class="player-name"></p>
+          <!-- <p class="team-name">Team Name</p> -->
           <p class="ranked-wins">Ranked Wins</p>
           <p class="team-wins">Team Wins</p>
         </div>
@@ -40,7 +40,14 @@
     <div class="drawer-tab">&lt;&lt;</div>
   </div>
   <main id="main">
-    <svg id="svg"></svg>
+    <div class="ranked-svg-container">
+      <p>Ranked Wins</p>
+      <svg class="ranked-wins-svg"></svg>
+    </div>
+    <div class="team-svg-container">
+      <p>Team Wins</p>
+      <svg class="team-wins-svg"></svg>
+    </div>
   </main>
   <script src="./bundle.js"></script>
 </body>
