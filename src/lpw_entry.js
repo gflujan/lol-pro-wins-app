@@ -1,7 +1,8 @@
 import './stylesheets/application.scss';
 import {
   grabPlayerOnlineWins,
-} from './scripts/grab_player_riot_wins';
+  grabPlayerStageWins,
+} from './scripts/grab_player_wins';
 import {
   populatePlayerSelectElement,
   changePlayerNameDisplay,
@@ -14,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const renderSelectedPlayer = () => {
     changePlayerNameDisplay();
     grabPlayerOnlineWins();
-    // grabPlayerStageWins();
+    grabPlayerStageWins();
   };
 
   d3.select('.player-select')

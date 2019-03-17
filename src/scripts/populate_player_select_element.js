@@ -44,6 +44,8 @@ export const updateWinsInfo = (wins, which) => {
     whichField = '.stage-wins';
   }
 
+  console.log(whichField);
+
   d3.select(whichField)
     .selectAll('span')
     .remove();

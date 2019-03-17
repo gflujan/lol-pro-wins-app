@@ -1,6 +1,7 @@
 import * as PlayerApiUtil from '../../util/player_api_util';
-import { addBars } from './generate_wins_bars.js';
 import * as PlayerSelectElements from './populate_player_select_element';
+import * as LcsProPlayers from '../static_data/lcs_pro_players';
+import { addBars } from './generate_wins_bars.js';
 
 export const grabPlayerOnlineWins = () => {
   const selectedPlayerName =
@@ -26,13 +27,31 @@ export const grabPlayerOnlineWins = () => {
       PlayerApiUtil.fetchPlayerPositionsData(playerWinsInfo.playerId)
         .then((res) => {
           d3.select('.online-wins-svg').selectAll('g').remove();
-          d3.select('.stage-wins-svg').selectAll('g').remove();
           playerWinsInfo.playerRankedWins = res[0].wins;
           return (playerWinsInfo.playerRankedWins);
         })
-        .then((wins) => {
-          PlayerSelectElements.updateWinsInfo(wins, 'online');
-          addBars([wins], 'online');
+        .then((onlineWins) => {
+          PlayerSelectElements.updateWinsInfo(onlineWins, 'online');
+          addBars([onlineWins], 'online');
         });
     });
+};
+
+export const grabPlayerStageWins = () => {
+  const selectedPlayerName =
+    d3.select('.player-select')
+      .node()
+      .value;
+
+  const teams = Object.values(LcsProPlayers.lcsTeams);
+
+  let stageWins;
+  teams.forEach((team) => {
+    if (team.allPlayers.includes(selectedPlayerName)) {
+      stageWins = team.teamWins['2019'].spring;
+    }
+  });
+  d3.select('.stage-wins-svg').selectAll('g').remove();
+  PlayerSelectElements.updateWinsInfo(stageWins, 'stage')
+  addBars([stageWins], 'stage');
 };

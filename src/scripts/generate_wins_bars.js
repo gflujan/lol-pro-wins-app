@@ -6,7 +6,7 @@ export const addBars = (data, whichSVG) => {
     svg = '.stage-wins-svg';
   }
 
-  const width = 500, barHeight = 300;
+  const width = 500, barHeight = 200;
 
   const x = d3.scaleLinear()
     .domain([0, d3.max(data)])
@@ -27,7 +27,7 @@ export const addBars = (data, whichSVG) => {
             // return ('translate(0,'+ i * barHeight +')');
 
             // USE THIS FOR SINGLE BARS
-            return ('translate(0, 150)');
+            return ('translate(0, 200)');
          });
 
   bar.append('rect')
