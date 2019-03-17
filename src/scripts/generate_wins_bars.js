@@ -1,3 +1,9 @@
+/* ---------------------------------------------
+// LINKS
+// https://www.digitalocean.com/community/tutorials/getting-started-with-data-visualization-using-javascript-and-the-d3-library
+// https://visual.ly/blog/creating-animations-and-transitions-with-d3-js/
+--------------------------------------------- */
+
 export const addBars = (data, whichSVG) => {
   let svg;
   if (whichSVG === 'online') {
