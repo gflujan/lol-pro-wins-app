@@ -47,14 +47,10 @@
     overflow: hidden;
     width: 92%;
 
-    g {
-      &:hover {
-        background-color: $gold-3;
-      }
-    }
-
     text {
-      fill: $white;
+      fill: $black;
+      font-family: sans-serif;
+      font-size: 1.3em;
     }
   }
 }

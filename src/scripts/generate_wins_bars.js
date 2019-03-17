@@ -6,7 +6,7 @@ export const addBars = (data, whichSVG) => {
     svg = '.stage-wins-svg';
   }
 
-  const width = 500, barHeight = 150;
+  const width = 500, barHeight = 300;
 
   const x = d3.scaleLinear()
     .domain([0, d3.max(data)])
@@ -23,14 +23,18 @@ export const addBars = (data, whichSVG) => {
          .enter()
          .append('g')
          .attr('transform', (d, i) => {
-            return ('translate(0,'+ i * barHeight +')');
+            // BEST FOR MULTIPLE BARS
+            // return ('translate(0,'+ i * barHeight +')');
+
+            // USE THIS FOR SINGLE BARS
+            return ('translate(0, 150)');
          });
 
   bar.append('rect')
      .attr('class', 'bar')
      .attr('width', 0)
      .attr('height', barHeight - 1)
-     .attr('fill', '#122e2a')
+     .attr('fill', '#ffdfa0')
      .transition()
      .duration(1500)
      .delay(500)
@@ -38,7 +42,7 @@ export const addBars = (data, whichSVG) => {
 
   bar.append('text')
      .attr('x', (d) => {
-        return (x(d) - 30);
+        return (x(d) - 50);
      })
      .attr('y', barHeight / 2)
      .attr('dy', '.35em')

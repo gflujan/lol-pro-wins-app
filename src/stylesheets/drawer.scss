@@ -46,15 +46,38 @@
   }
 
   .player-info-form {
-    p {
+    div {
       background-color: $gold-5;
       border: 1px solid #999;
       border-radius: 3px;
       color: $teal-2;
+      font-size: 1.2em;
       height: 20px;
-      margin: 1em .2em;
       text-align: center;
       padding: .5em 0;
+    }
+
+    .player-name {
+      text-transform: uppercase;
+    }
+
+    h4,
+    div {
+      margin: 0 .2em;
+    }
+
+    .player-name,
+    h4 {
+      margin-top: 1em;
+    }
+
+    .stage-wins {
+      margin-bottom: 1em;
+    }
+
+    h3,
+    h4 {
+      font-size: 1.2em;
     }
   }
 
@@ -80,7 +103,8 @@
   border: 2px solid $gold-3;
   border-left: .5px solid $sidebar-bg;
   cursor: pointer;
-  display: flex;
+  // display: flex;
+  display: none;
   height: 50px;
   left: 16.85em;
   padding: 0 0 0 .3em;

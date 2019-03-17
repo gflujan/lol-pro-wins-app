@@ -1,10 +1,17 @@
 import * as PlayerApiUtil from '../../util/player_api_util';
 
-export const grabPlayerRiotInfo = (playerDisplayName) => {
+export const grabPlayerRiotInfo = () => {
+  const selectedPlayerName =
+    d3.select('.player-select')
+      .node()
+      .value;
+
+  console.log(selectedPlayerName);
+
   let player;
   let playerId;
   let playerAccountId;
-  PlayerApiUtil.fetchPlayer(playerDisplayName)
+  PlayerApiUtil.fetchPlayer(selectedPlayerName)
     .then((fetchedPlayer) => {
       player = fetchedPlayer;
       playerId = player.id;
@@ -17,7 +24,7 @@ export const grabPlayerRiotInfo = (playerDisplayName) => {
       matches = fetchedMatches.matches;
     });
 
-  const playerInfo = [player, playerDisplayName, playerId, playerAccountId, matches];
+  const playerInfo = [player, selectedPlayerName, playerId, playerAccountId, matches];
   console.log(playerInfo);
   // return (playerInfo);
 };
