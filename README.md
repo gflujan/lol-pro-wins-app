@@ -1,6 +1,6 @@
 # LoL Pro Wins App
 
-[https://lol-pro-wins.herokuapp.com/](Live Demo!)
+[Live Demo!](https://lol-pro-wins.herokuapp.com/)
 
 ## Synopsis
 This is a data visualization project to attempt to show the correlation between a League of Legends pro player's Solo Queue win rate vs. their on-stage competitive win rate.
