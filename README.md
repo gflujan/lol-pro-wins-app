@@ -66,16 +66,16 @@ My list of MVP's are:
 
 ## Implementation Timeline
 1. Day One 
-   * [] Implementation and build out of a basic backend to talk with Riot Games' API 
-   * [] Create the skeleton for my project 
-   * [] Create wireframes 
-   * [] Decide on a color scheme/palette and fonts to be used project wide
+   * Implementation and build out of a basic backend to talk with Riot Games' API 
+   * Create the skeleton for my project 
+   * Create wireframes 
+   * Decide on a color scheme/palette and fonts to be used project wide
 2. Day Two 
-   * [] Research D3 info and tutorials 
-   * [] Create routes and Axios calls to retrieve data from Riot Games API 
-   * [] Aggregation of historical data pertaining to pro players on-stage, competitive play win rates
+   * Research D3 info and tutorials 
+   * Create routes and Axios calls to retrieve data from Riot Games API 
+   * Aggregation of historical data pertaining to pro players on-stage, competitive play win rates
 3. Day Three 
-   * [] Build out sidebar to be used for selections entry 
-   * [] Build out data visualizations, structure for info & prettify it
+   * Build out sidebar to be used for selections entry 
+   * Build out data visualizations, structure for info & prettify it
 4. Day Four 
-   * [] BONUS: Build minimap heatmap
+   * BONUS: Build minimap heatmap
