@@ -29,6 +29,18 @@
 
 body {
   font-family: $font-stack;
+
+  .title {
+    border-bottom: 1px solid $gold-3;
+    color: $gold-3;
+    font-size: 2.5em;
+    left: .55em;
+    padding-bottom: .3em;
+    position: absolute;
+    text-align: center;
+    top: .75em;
+    z-index: 100;
+  }
 }
 
 .github-ribbon {

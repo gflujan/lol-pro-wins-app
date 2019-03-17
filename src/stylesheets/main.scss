@@ -6,8 +6,8 @@
   justify-content: center;
   width: 100vw;
 
-  .ranked-svg-container,
-  .team-svg-container {
+  .online-svg-container,
+  .stage-svg-container {
     background-color: #333;
     border: 2px solid $teal-2;
     display: flex;
@@ -19,30 +19,42 @@
       border-bottom: 1px solid $teal-3;
       color: $teal-2;
       font-family: $font-stack;
-      font-size: 24px;
+      font-size: 32px;
       font-weight: bolder;
       margin: 0 auto;
-      padding: 1em 0;
+      padding: 1em 0 .5em;
       text-align: center;
       width: 60%;
     }
   }
 
-  .ranked-svg-container {
+  .online-svg-container {
     border-right-width: 1px;
   }
 
-  .team-svg-container {
+  .stage-svg-container {
     border-left-width: 1px;
   }
 
-  .ranked-wins-svg,
-  .team-wins-svg {
-    outline: 1px dashed yellow;
+  .online-wins-svg,
+  .stage-wins-svg {
+    border-bottom: 1px dashed $gold-4;
+    border-left: 1px dashed $gold-4;
     height: 100%;
     margin: 0 auto;
-    margin-bottom: 1em;
-    margin-top: 1em;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    overflow: hidden;
     width: 92%;
+
+    g {
+      &:hover {
+        background-color: $gold-3;
+      }
+    }
+
+    text {
+      fill: $white;
+    }
   }
 }
