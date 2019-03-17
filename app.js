@@ -31,7 +31,6 @@ app.get('/player/:name', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
-      console.log(results);
       res.send(results);
     })
     .catch((err) => {
@@ -50,7 +49,6 @@ app.get('/matchlist/:encryptedAccountId', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
-      console.log(results);
       res.send(results);
     })
     .catch((err) => {
@@ -69,7 +67,6 @@ app.get('/matches/:matchId', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
-      console.log(results);
       res.send(results);
     })
     .catch((err) => {
@@ -88,7 +85,6 @@ app.get('/positions/:encryptedSummonerId', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
-      console.log(results);
       res.send(results);
     })
     .catch((err) => {
@@ -107,7 +103,6 @@ app.get('/summoner-masteries/:encryptedSummonerId', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
-      console.log(results);
       res.send(results);
     })
     .catch((err) => {
@@ -126,7 +121,6 @@ app.get('/scores/:encryptedSummonerId', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
-      console.log(results);
       res.send(results);
     })
     .catch((err) => {
@@ -145,7 +139,6 @@ app.get('/challenger-queue/:queue', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
-      console.log(results);
       res.send(results);
     })
     .catch((err) => {
@@ -165,7 +158,6 @@ app.get('/match-timelines/:matchId', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
-      console.log(results);
       res.send(results);
     })
     .catch((err) => {

@@ -14,7 +14,6 @@ export const fetchPlayer = (playerName) => {
 export const fetchPlayerMatchlist = (encryptedAccountId) => {
   return (axios.get(`/matchlist/${encryptedAccountId}`)
     .then((res) => {
-      console.log(res);
       return (res.data);
     })
     .catch((err) => {
@@ -26,7 +25,6 @@ export const fetchPlayerMatchlist = (encryptedAccountId) => {
 export const fetchMatch = (matchId) => {
   return (axios.get(`/matches/${matchId}`)
     .then((res) => {
-      console.log(res);
       return (res.data);
     })
     .catch((err) => {
@@ -49,7 +47,6 @@ export const fetchPlayerPositionsData = (encryptedSummonerId) => {
 export const fetchPlayerMasteries = (encryptedSummonerId) => {
   return (axios.get(`/summoner-masteries/${encryptedSummonerId}`)
     .then((res) => {
-      console.log(res);
       return (res.data);
     })
     .catch((err) => {
@@ -61,7 +58,6 @@ export const fetchPlayerMasteries = (encryptedSummonerId) => {
 export const fetchPlayerScores = (encryptedSummonerId) => {
   return (axios.get(`/scores/${encryptedSummonerId}`)
     .then((res) => {
-      console.log(res);
       return (res.data);
     })
     .catch((err) => {
@@ -73,7 +69,6 @@ export const fetchPlayerScores = (encryptedSummonerId) => {
 export const fetchAllChallengerPlayers = (queue) => {
   return (axios.get(`/challenger-queue/${queue}`)
     .then((res) => {
-      console.log(res);
       return (res.data);
     })
     .catch((err) => {
@@ -85,7 +80,6 @@ export const fetchAllChallengerPlayers = (queue) => {
 export const fetchPlayerMatchTimelines = (matchId) => {
   return (axios.get(`/match-timelines/${matchId}`)
     .then((res) => {
-      console.log(res);
       return (res.data);
     })
     .catch((err) => {
