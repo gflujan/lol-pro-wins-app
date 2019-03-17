@@ -30,52 +30,52 @@ My list of MVP's are:
 * (Potential Bonus Feature) Comparison of two or more players, possibly a head-to-head account of results
 
 ## Architecture & Technologies
-1) Architecture 
-a. RootFolder 
-i. dist/ 
-1. index.html 
-2. bundle.js
-ii. src/ 
-1. lpw_entry.js 
-iii. package.json 
-iv. webpack.config.js
-2) Technologies 
-a. Riot Games Developer API 
-i. I will be querying their API/database for user entered names of pro players
-ii. I will be parsing through their data to get relevant win results 
-iii. I will then compare that data to archived on-stage competitive play wins
-iv. This is the crux of this project. Without it, it would be a much more tedious (and manual) process to get results of a pro players online wins 
-b. D3.js 
-i. I will use this library to "prettify" my data
+1. Architecture 
+   * RootFolder 
+      * dist/ 
+         * index.html 
+         * bundle.js
+      * src/ 
+         * lpw_entry.js 
+      * package.json 
+      * webpack.config.js
+2. Technologies 
+   * Riot Games Developer API 
+      * I will be querying their API/database for user entered names of pro players
+      * I will be parsing through their data to get relevant win results 
+      * I will then compare that data to archived on-stage competitive play wins
+      * This is the crux of this project. Without it, it would be a much more tedious (and manual) process to get results of a pro players online wins 
+   * D3.js 
+      * I will use this library to "prettify" my data
 
 ## Data & API's
 1) Riot Games Developer API 
-a. I will need a simple backend to query the API from Riot Games 
-b. This is due to the fact that users will be able to search for any current, existing pro player and the search will need to be dynamic based on the current data provided by Riot Games 
-c. To avoid any potential legal risks or violations of Riot's TOS, I will not be storing any of this data in a database 
-d. All data will be individual requests to their API 
-e. Also, due to their enforcement of rate limits (i.e. num requests per second), I will try to enforce my own restriction of how many can be requests made, and how quickly 
-f. Possible Endpoints (all will be GET requests): 
-    i. /lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId} 
-    ii. /lol/champion-mastery/v4/scores/by-summoner/{encryptedSummonerId} 
-    iii. /lol/league/v4/challengerleagues/by-queue/{queue} 
-    iv. /lol/league/v4/positions/by-summoner/{encryptedSummonerId} 
-    v. /lol/match/v4/matches/{matchId} 
-    vi. /lol/match/v4/timelines/by-match/{matchId} 
-    vii. /lol/summoner/v4/summoners/by-name/{summonerName}
+   * I will need a simple backend to query the API from Riot Games 
+   * This is due to the fact that users will be able to search for any current, existing pro player and the search will need to be dynamic based on the current data provided by Riot Games 
+   * To avoid any potential legal risks or violations of Riot's TOS, I will not be storing any of this data in a database 
+   * All data will be individual requests to their API 
+   * Also, due to their enforcement of rate limits (i.e. num requests per second), I will try to enforce my own restriction of how many can be requests made, and how quickly 
+   * Possible Endpoints (all will be GET requests): 
+      * /lol/champion-mastery/v4/champion-masteries/by-summoner/{encryptedSummonerId} 
+      * /lol/champion-mastery/v4/scores/by-summoner/{encryptedSummonerId} 
+      * /lol/league/v4/challengerleagues/by-queue/{queue} 
+      * /lol/league/v4/positions/by-summoner/{encryptedSummonerId} 
+      * /lol/match/v4/matches/{matchId} 
+      * /lol/match/v4/timelines/by-match/{matchId} 
+      * /lol/summoner/v4/summoners/by-name/{summonerName}
 
 ## Implementation Timeline
-1) Day One 
-a. [] Implementation and build out of a basic backend to talk with Riot Games' API 
-b. [] Create the skeleton for my project 
-c. [] Create wireframes 
-d. [] Decide on a color scheme/palette and fonts to be used project wide
-2) Day Two 
-a. [] Research D3 info and tutorials 
-b. [] Create routes and Axios calls to retrieve data from Riot Games API 
-c. [] Aggregation of historical data pertaining to pro players on-stage, competitive play win rates
-3) Day Three 
-a. [] Build out sidebar to be used for selections entry 
-b. [] Build out data visualizations, structure for info & prettify it
-4) Day Four 
-a. [] BONUS: Build minimap heatmap
+1. Day One 
+   * [] Implementation and build out of a basic backend to talk with Riot Games' API 
+   * [] Create the skeleton for my project 
+   * [] Create wireframes 
+   * [] Decide on a color scheme/palette and fonts to be used project wide
+2. Day Two 
+   * [] Research D3 info and tutorials 
+   * [] Create routes and Axios calls to retrieve data from Riot Games API 
+   * [] Aggregation of historical data pertaining to pro players on-stage, competitive play win rates
+3. Day Three 
+   * [] Build out sidebar to be used for selections entry 
+   * [] Build out data visualizations, structure for info & prettify it
+4. Day Four 
+   * [] BONUS: Build minimap heatmap
