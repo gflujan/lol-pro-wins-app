@@ -39,23 +39,18 @@ export const populatePlayerSelectElement = () => {
 export const updateWinsInfo = (wins, which) => {
   let whichField;
   if (which === 'online') {
-    whichField = '.online-wins';
-  } else if (which === '.stage-wins') {
-    whichField = '.stage-wins';
+    whichField = '.online-wins-field';
+  } else if (which === 'stage') {
+    whichField = '.stage-wins-field';
   }
 
-  console.log(whichField);
-
+  const str = wins.toString();
   d3.select(whichField)
     .selectAll('span')
-    .remove();
-
-  d3.select(whichField)
-    .selectAll('span')
-    .data(wins)
+    .data(str)
     .enter()
     .append('span')
-    .text((wins) => {
-      return (wins);
+    .text((d) => {
+      return (d);
     });
 };

@@ -9,7 +9,8 @@
   .online-svg-container,
   .stage-svg-container {
     background-color: #333;
-    border: 2px solid $teal-2;
+    border-right: 2px solid rgba(103,196,204,.5);
+    border-top: 2px solid rgba(103,196,204,.5);
     display: flex;
     flex-direction: column;
     height: 80%;
@@ -30,10 +31,12 @@
 
   .online-svg-container {
     border-right-width: 1px;
+    margin-right: .5em;
   }
 
   .stage-svg-container {
     border-left-width: 1px;
+    margin-left: .5em;
   }
 
   .online-wins-svg,

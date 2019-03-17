@@ -27,6 +27,7 @@ export const grabPlayerOnlineWins = () => {
       PlayerApiUtil.fetchPlayerPositionsData(playerWinsInfo.playerId)
         .then((res) => {
           d3.select('.online-wins-svg').selectAll('g').remove();
+          d3.select('.online-wins-field').selectAll('span').remove();
           playerWinsInfo.playerRankedWins = res[0].wins;
           return (playerWinsInfo.playerRankedWins);
         })
@@ -52,6 +53,7 @@ export const grabPlayerStageWins = () => {
     }
   });
   d3.select('.stage-wins-svg').selectAll('g').remove();
+  d3.select('.stage-wins-field').selectAll('span').remove();
   PlayerSelectElements.updateWinsInfo(stageWins, 'stage')
   addBars([stageWins], 'stage');
 };
