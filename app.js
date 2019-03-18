@@ -1,7 +1,6 @@
 // READ THIS
 // https://developer.riotgames.com/getting-started.html
-const riot = require('./config/keys')
-  .riotGamesApi;
+const riot = require('./config/keys').riotGamesApi;
 const express = require('express');
 const app = express();
 const path = require('path');
