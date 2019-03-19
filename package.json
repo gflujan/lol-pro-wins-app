@@ -7,7 +7,7 @@
   "description": "This is a data visualization project to attempt to show the correlation between a League of Legends pro player's Solo Queue win rate vs. their on-stage competitive win rate.",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js",
+    "start": "node app.js",
     "build": "webpack",
     "start:dev": "webpack -w --mode=development",
     "dev:debug": "nodemon --inspect app.js",
