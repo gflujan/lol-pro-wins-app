@@ -9,13 +9,13 @@ const PORT = process.env.PORT || 8000;
 const api_path = 'https://na1.api.riotgames.com/lol';
 
 // This logic is used for Heroku deployment
-// to make sure we don't have "run build" before pushing to Heroku
-if (process.env.NODE_ENV === 'production') {
+// to make sure we don't have to "run build" before pushing to Heroku
+// if (process.env.NODE_ENV === 'production') {
   app.use(express.static('dist'));
   app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
   })
-}
+// }
 
 /* ---------------------------------------------
 // FIND A PRO PLAYER BY THEIR SUMMONER NAME
