@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import * as LcsProPlayers from '../static_data/lcs_pro_players';
 
 export const changePlayerNameDisplay = () => {

@@ -1,3 +1,4 @@
+import * as d3 from 'd3';
 import * as PlayerApiUtil from '../../util/player_api_util';
 import * as PlayerSelectElements from './populate_player_select_element';
 import * as LcsProPlayers from '../static_data/lcs_pro_players';
