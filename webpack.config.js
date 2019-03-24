@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/lpw_entry.js',
@@ -26,6 +27,10 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [ 'file-loader', 'image-webpack-loader' ]
       }
     ]
   },
