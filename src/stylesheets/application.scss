@@ -34,17 +34,33 @@ body {
     border-bottom: 1px solid $gold-3;
     color: $gold-3;
     font-size: 2.5em;
-    left: .55em;
+    left: 1.2em;
     padding-bottom: .3em;
     position: absolute;
     text-align: center;
     top: .75em;
     z-index: 100;
   }
-}
 
-.github-ribbon {
-  position: fixed;
-  right: 0;
-  top: 0;
+  .github-ribbon {
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  #about {
+    background-color: $dark-teal-5;
+    border-bottom: 1px solid $white;
+    border-radius: 3px;
+    bottom: 1em;
+    color: $gold-3;
+    cursor: pointer;
+    font-size: 1.5em;
+    height: 1em;
+    padding: .5em;
+    position: absolute;
+    right: 1.25em;
+    transition: all .5s ease-in;
+    width: 6em;
+  }
 }

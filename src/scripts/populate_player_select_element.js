@@ -1,26 +1,6 @@
 import * as d3 from 'd3';
 import * as LcsProPlayers from '../static_data/lcs_pro_players';
 
-export const changePlayerNameDisplay = () => {
-  const selectedPlayerName =
-    d3.select('.player-select')
-      .node()
-      .value;
-
-  d3.select('.player-name')
-    .selectAll('span')
-    .remove();
-
-  d3.select('.player-name')
-    .selectAll('span')
-    .data(selectedPlayerName)
-    .enter()
-    .append('span')
-    .text((playerName) => {
-      return (playerName);
-    });
-};
-
 export const populatePlayerSelectElement = () => {
   const allLcsPlayers = LcsProPlayers.grabAllPlayerNames();
   const allLcsTeams = LcsProPlayers.grabAllTeamNames();
@@ -45,10 +25,9 @@ export const updateWinsInfo = (wins, which) => {
     whichField = '.stage-wins-field';
   }
 
-  const str = wins.toString();
   d3.select(whichField)
     .selectAll('span')
-    .data(str)
+    .data(wins.toString())
     .enter()
     .append('span')
     .text((d) => {

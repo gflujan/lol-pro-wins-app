@@ -4,9 +4,9 @@
   box-sizing: border-box;
   color: $gold-3;
   display: flex;
-  height: 100vh;
+  height: 100%;
   position: fixed;
-  width: 17em;
+  width: 20em;
 
   .sidebar-container {
     display: flex;
@@ -15,108 +15,113 @@
     margin: 0 auto;
     margin-bottom: 1em;
     margin-top: 6em;
-    width: 90%;
-  }
+    width: 88%;
 
-  .player-info-form,
-  .split-info-form,
-  .social {
-    margin-top: 1em;
-    width: 100%;
-  }
-
-  .player-info-form,
-  .split-info-form {
-    background-color: #444;
-    border-radius: 4px;
-    box-sizing: border-box;
-    color: $white;
-    font-size: 1em;
-    padding: .3em;
-    width: 100%;
-
-    select {
-      font-family: $font-stack;
-      font-size: .9em;
-      height: 2em;
-      margin-top: .5em;
-      outline: none;
-      width: 100%;
-    }
-  }
-
-  .player-info-form {
-    div {
-      background-color: $gold-5;
-      border: 1px solid #999;
-      border-radius: 3px;
-      color: $teal-2;
-      font-size: 1.2em;
-      height: 20px;
-      text-align: center;
-      padding: .5em 0;
-    }
-
-    .player-name {
-      text-transform: uppercase;
-    }
-
-    h4,
-    div {
-      margin: 0 .2em;
-    }
-
-    .player-name,
-    h4 {
+    .player-info-form,
+    .social,
+    .split-info-form {
+      margin-bottom: 1em;
       margin-top: 1em;
     }
 
-    .stage-wins-field {
-      margin-bottom: 1em;
+    .player-info-form,
+    .split-info-form {
+      background-color: #444;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: $white;
+      font-size: 1em;
+      padding: .3em;
+      width: 100%;
+
+      select,
+      div {
+        background-color: $gold-5;
+        color: $teal-2;
+        font-family: $font-stack;
+        padding: .5em 0;
+      }
+
+      select {
+        cursor: pointer;
+        height: 2.2em;
+        outline: none;
+        text-transform: uppercase;
+        width: 96.5%;
+      }
+
+      div {
+        border: 1px solid #999;
+        border-radius: 3px;
+        height: 1.2em;
+        text-align: center;
+      }
+
+      div,
+      h4,
+      select {
+        font-size: 1.2em;
+        margin: .5em .2em;
+      }
+
+      .stage-wins-field {
+        margin-bottom: 1em;
+      }
     }
 
-    h3,
-    h4 {
-      font-size: 1.2em;
-    }
-  }
-
-  .social {
-    display: flex;
-    justify-content: space-around;
-
-    .lnkd,
-    .git,
-    .bhnc,
-    .drbl {
-      align-items: center;
-      cursor: pointer;
+    .social {
       display: flex;
-      height: 32px;
-      text-align: center;
-      width: 32px;
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
+      justify-content: space-around;
 
-    .lnkd {
-      background-image: url('../img/social_badges/linkedin.png');
-      background-size: 85%;
-    }
+      .lnkd,
+      .git,
+      .bhnc,
+      .drbl {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        height: 32px;
+        text-align: center;
+        width: 32px;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+      }
 
-    .git {
-      background-image: url('../img/social_badges/github.png');
-      background-size: 85%;
-    }
+      .lnkd {
+        background-image: url('../img/social_badges/linkedin.png');
+        background-size: 85%;
 
-    .bhnc {
-      background-image: url('../img/social_badges/behance.png');
-    }
+        &:hover {
+          background-image: url('../img/social_badges/linkedin-hover.png');
+        }
+      }
 
-    .drbl {
-      background-image: url('../img/social_badges/dribbble.png');
-      background-size: 80%;
+      .git {
+        background-image: url('../img/social_badges/github.png');
+        background-size: 85%;
+
+        &:hover {
+          background-image: url('../img/social_badges/github-hover.png');
+        }
+      }
+
+      .bhnc {
+        background-image: url('../img/social_badges/behance.png');
+        background-size: 100%;
+
+        &:hover {
+          background-image: url('../img/social_badges/behance-hover.png');
+        }
+      }
+
+      .drbl {
+        background-image: url('../img/social_badges/dribbble.png');
+        background-size: 80%;
+
+        &:hover {
+          background-image: url('../img/social_badges/dribbble-hover.png');
+        }
+      }
     }
   }
 
@@ -147,5 +152,11 @@
     .fa-caret-right {
       display: none;
     }
+  }
+}
+
+@media screen and ( max-width: 1100px ) {
+  .sidebar-drawer {
+    display: none;
   }
 }
