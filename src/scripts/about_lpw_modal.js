@@ -20,7 +20,7 @@ export const closeAboutLpwModal = () => {
   about.style.height = '1em';
   about.style.padding = '.5em';
   about.style.fontSize = '1.5em';
-  setTimeout(() => {about.innerHTML = text}, 100);
+  setTimeout(() => {about.innerHTML = text}, 150);
 };
 
 // Try using document.createElement('xyz'); to add a hyperlink in the #about element
