@@ -32,10 +32,10 @@ export const addBars = (data, whichSVG) => {
          .append('g')
          .attr('transform', (d, i) => {
             // BEST FOR MULTIPLE BARS
-            // return ('translate(0,'+ i * barHeight +')');
+            return ('translate(0,'+ i * barHeight +')');
 
             // USE THIS FOR SINGLE BARS
-            return ('translate(0, 200)');
+            // return ('translate(0, 200)');
          });
 
   bar.append('rect')
