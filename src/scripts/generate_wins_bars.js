@@ -6,21 +6,22 @@
 import * as d3 from 'd3';
 
 export const addBars = (data, whichSVG) => {
-  let svg;
+  let currSVG;
   if (whichSVG === 'online') {
-    svg = '.online-wins-svg';
+    currSVG = '.online-wins-svg';
   } else if (whichSVG === 'stage') {
-    svg = '.stage-wins-svg';
+    currSVG = '.stage-wins-svg';
   }
 
   const width = 500, barHeight = 200;
 
-  const x = d3.scaleLinear()
-    .domain([0, d3.max(data)])
-    .range([0, width]);
+  const x =
+    d3.scaleLinear()
+      .domain([0, d3.max(data)])
+      .range([0, width]);
 
   const chart =
-    d3.select(svg)
+    d3.select(currSVG)
       .attr('width', width)
       .attr('height', barHeight * data.length);
 

@@ -166,6 +166,6 @@ app.get('/match-timelines/:matchId', (req, res) => {
 app.listen(PORT, () => {
   console.log('--- END OF APP.js FILE ---');
   console.log(__dirname);
-  console.log(`listening on ${PORT}`);
+  console.log(`listening on PORT: ${PORT}`);
   console.log('--- END OF APP.js FILE ---');
 });

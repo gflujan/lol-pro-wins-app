@@ -11,19 +11,19 @@ export const grabPlayerOnlineWins = () => {
       .value;
 
   const playerWinsInfo = {
-    player: null,
-    playerId: null,
-    playerAccountId: null,
-    playerIGN: null,
+    player:           null,
+    playerId:         null,
+    playerAccountId:  null,
+    playerIGN:        null,
     playerRankedWins: 0,
   };
 
   PlayerApiUtil.fetchPlayer(selectedPlayerName)
     .then((fetchedPlayer) => {
-      playerWinsInfo.player = fetchedPlayer;
-      playerWinsInfo.playerId = fetchedPlayer.id;
-      playerWinsInfo.playerAccountId = fetchedPlayer.accountId;
-      playerWinsInfo.playerIGN = fetchedPlayer.name;
+      playerWinsInfo.player           = fetchedPlayer;
+      playerWinsInfo.playerId         = fetchedPlayer.id;
+      playerWinsInfo.playerAccountId  = fetchedPlayer.accountId;
+      playerWinsInfo.playerIGN        = fetchedPlayer.name;
 
       PlayerApiUtil.fetchPlayerPositionsData(playerWinsInfo.playerId)
         .then((res) => {
