@@ -14,6 +14,7 @@
     display: flex;
     flex-direction: column;
     height: 80%;
+    margin-left: 10em;
     width: 30%;
 
     p {
@@ -50,8 +51,12 @@
     overflow: hidden;
     width: 92%;
 
+    .bar {
+      fill: $gold-3;
+    }
+
     text {
-      fill: $black;
+      fill: $teal-3;
       font-family: sans-serif;
       font-size: 1.3em;
     }

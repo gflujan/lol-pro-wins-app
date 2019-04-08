@@ -88,38 +88,38 @@
       }
 
       .lnkd {
-        background-image: url('../img/social_badges/linkedin.png');
+        background-image: url('../../dist/social_badges/linkedin.png');
         background-size: 85%;
 
         &:hover {
-          background-image: url('../img/social_badges/linkedin-hover.png');
+          background-image: url('../../dist/social_badges/linkedin-hover.png');
         }
       }
 
       .git {
-        background-image: url('../img/social_badges/github.png');
+        background-image: url('../../dist/social_badges/github.png');
         background-size: 85%;
 
         &:hover {
-          background-image: url('../img/social_badges/github-hover.png');
+          background-image: url('../../dist/social_badges/github-hover.png');
         }
       }
 
       .bhnc {
-        background-image: url('../img/social_badges/behance.png');
+        background-image: url('../../dist/social_badges/behance.png');
         background-size: 100%;
 
         &:hover {
-          background-image: url('../img/social_badges/behance-hover.png');
+          background-image: url('../../dist/social_badges/behance-hover.png');
         }
       }
 
       .drbl {
-        background-image: url('../img/social_badges/dribbble.png');
+        background-image: url('../../dist/social_badges/dribbble.png');
         background-size: 80%;
 
         &:hover {
-          background-image: url('../img/social_badges/dribbble-hover.png');
+          background-image: url('../../dist/social_badges/dribbble-hover.png');
         }
       }
     }

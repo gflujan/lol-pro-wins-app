@@ -8,17 +8,20 @@ import * as d3 from 'd3';
 export const addBars = (data, whichSVG) => {
   let currSVG;
   if (whichSVG === 'online') {
-    currSVG = '.online-wins-svg';
+    currSVG = '#online';
   } else if (whichSVG === 'stage') {
-    currSVG = '.stage-wins-svg';
+    currSVG = '#stage';
   }
 
-  const width = 500, barHeight = 200;
+  // const width = online.offsetWidth;
+  const width = 500;
+  // const barHeight = online.offsetHeight;
+  const barHeight = 100;
 
-  const x =
+  const xScale =
     d3.scaleLinear()
       .domain([0, d3.max(data)])
-      .range([0, width]);
+      .range([0, d3.max(data) * 2]);
 
   const chart =
     d3.select(currSVG)
@@ -31,32 +34,22 @@ export const addBars = (data, whichSVG) => {
          .enter()
          .append('g')
          .attr('transform', (d, i) => {
-            // BEST FOR MULTIPLE BARS
             return ('translate(0,'+ i * barHeight +')');
-
-            // USE THIS FOR SINGLE BARS
-            // return ('translate(0, 200)');
          });
 
   bar.append('rect')
-     .attr('class', 'bar')
      .attr('width', 0)
      .attr('height', barHeight - 1)
-     .attr('fill', '#ffdfa0')
+     .attr('class', 'bar')
      .transition()
      .duration(1500)
      .delay(500)
-     .attr('width', x);
+     .attr('width', xScale);
 
   bar.append('text')
-     .attr('x', (d) => {
-        return (x(d) - 50);
-     })
+     .attr('x', (d) => xScale(d))
      .attr('y', barHeight / 2)
-     .attr('dy', '.35em')
-     .text((d) => {
-        return (d);
-     })
+     .text((d) => d)
      .style('opacity', 0)
      .transition()
      .duration(5000)
@@ -68,31 +61,61 @@ export const addBars = (data, whichSVG) => {
 // TRYING OUT A COLUMN CHART
 --------------------------------------------- */
 // export const addBars = (data, whichSVG) => {
-//   let svg;
+//   let currSVG;
 //   if (whichSVG === 'online') {
-//     svg = '.online-wins-svg';
+//     currSVG = '#online';
 //   } else if (whichSVG === 'stage') {
-//     svg = '.stage-wins-svg';
+//     currSVG = '#stage';
 //   }
 
-//   d3.select(svg)
-//     .selectAll('rect')
-//     .data(data)
-//     .enter()
-//     .append('rect')
-//     .attr('class', 'bar')
-//     .attr('height', function(d,i) {
-//       return (d * 10);
-//     })
-//     .attr('width', 40)
-//     .attr('x', function(d,i) {
-//       return ((i * 60) + 25);
-//     })
-//     .attr('y', function(d,i) {
-//       return (700 - (d * 10));
-//     })
-//    .transition()
-//    .duration(1500)
-//    .delay(500)
-//    // .attr('height', 700);
+//   let height = online.offsetHeight;
+//   let width  = online.offsetWidth;
+//   let margin = { top: 0, right: 0, bottom: 30, left: 30 };
+
+//   let xScale =
+//     d3.scaleBand()
+//       .domain(data)
+//       .range([0, width])
+//       .padding(0.1);
+
+//   let yScale =
+//     d3.scaleLinear()
+//       .domain([0, d3.max(data)])
+//       .range([0, height]);
+
+//   let svg =
+//     d3.select(currSVG)
+//       .append('svg')
+//       .attr('height', height)
+//       .attr('width', width);
+
+//   let bar =
+//     svg.selectAll('rect')
+//        .data(data)
+//        .enter();
+
+//   bar.append('rect')
+//      .attr('height', (d) => yScale(d))
+//      .attr('width', (d) => xScale(d))
+//      .attr('x', (d) => xScale(d))
+//      .attr('y', (d) => height - yScale(d))
+//      .attr('class', 'bar')
+//      .attr('fill', '#ffdfa0')
+//      .transition()
+//      .duration(1500)
+//      .delay(500)
+//      .style('height', 100);
+
+//   bar.append('text')
+//      .attr('x', (d) => xScale(d))
+//      .attr('y', height / 2)
+//      .attr('dx', '.5em')
+//      .text((d) => {
+//         return (d);
+//      })
+//      .style('opacity', 0)
+//      .transition()
+//      .duration(5000)
+//      .delay(1500)
+//      .style('opacity', 100);
 // };
