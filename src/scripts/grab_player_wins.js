@@ -25,7 +25,7 @@ export const grabPlayerOnlineWins = () => {
       playerWinsInfo.playerAccountId  = fetchedPlayer.accountId;
       playerWinsInfo.playerIGN        = fetchedPlayer.name;
 
-      PlayerApiUtil.fetchPlayerPositionsData(playerWinsInfo.playerId)
+      PlayerApiUtil.fetchPlayerEntriesData(playerWinsInfo.playerId)
         .then((res) => {
           d3.select('.online-wins-svg').selectAll('g').remove();
           d3.select('.online-wins-field').selectAll('span').remove();

@@ -28,6 +28,7 @@ app.get('/player/:name', (req, res) => {
     })
     .then((body) => {
       const results = JSON.parse(body);
+      // const results = body.json();
       res.send(results);
     })
     .catch((err) => {
@@ -74,9 +75,10 @@ app.get('/matches/:matchId', (req, res) => {
 /* ---------------------------------------------
 // GET WINS/LOSSES/POINTS DATA FOR A PLAYER
 --------------------------------------------- */
-app.get('/positions/:encryptedSummonerId', (req, res) => {
+// update "positions" to be "entries" ???
+app.get('/entries/:encryptedSummonerId', (req, res) => {
   const encryptedSummonerId = req.params.encryptedSummonerId;
-  fetch(`${api_path}/league/v4/positions/by-summoner/${encryptedSummonerId}?api_key=${riot}`)
+  fetch(`${api_path}/league/v4/entries/by-summoner/${encryptedSummonerId}?api_key=${riot}`)
     .then((res) => {
       return (res.text());
     })

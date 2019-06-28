@@ -79,3 +79,10 @@ My list of MVP's are:
    * Build out data visualizations, structure for info & prettify it
 4. Day Four 
    * BONUS: Build minimap heatmap
+
+## Future Features & Tasks 
+* Change visualization type
+    * the user can switch between a bar chart, a pie graph and some other option(s) 
+    * these other options may or may not have more/less info 
+
+

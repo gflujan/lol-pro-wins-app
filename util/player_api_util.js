@@ -33,8 +33,8 @@ export const fetchMatch = (matchId) => {
     })
   );
 };
-export const fetchPlayerPositionsData = (encryptedSummonerId) => {
-  return (axios.get(`/positions/${encryptedSummonerId}`)
+export const fetchPlayerEntriesData = (encryptedSummonerId) => {
+  return (axios.get(`/entries/${encryptedSummonerId}`)
     .then((res) => {
       return (res.data);
     })
