@@ -6,12 +6,13 @@
 import * as d3 from 'd3';
 
 export const addBars = (data, whichSVG) => {
-  let currSVG;
-  if (whichSVG === 'online') {
-    currSVG = '#online';
-  } else if (whichSVG === 'stage') {
-    currSVG = '#stage';
-  }
+  // let currSVG;
+  // if (whichSVG === 'online') {
+  //   currSVG = '#online';
+  // } else if (whichSVG === 'stage') {
+  //   currSVG = '#stage';
+  // }
+  const currSVG = whichSVG === 'online' ? '#online' : '#stage';
 
   // const width = online.offsetWidth;
   const width = 500;
